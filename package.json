@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "goledgereact": "^1.5.1",
+    "material-table": "^1.5.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && aws s3 sync build/ s3://goledgereact-test.com.br",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
